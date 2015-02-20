@@ -1,0 +1,30 @@
+<template name="index">
+  {{ >auth }}
+  {{ >servicesList }}
+  {{ >newService }}
+  {{ >pushMiddleware }}
+</template>
+
+<template name="auth">
+  <input type="text" id="key" value="144dca03d033fe2d5969301143622aa8">
+  <input type="text" id="monitorID" value="2e1a00ee3fa3">
+
+  <button type="submit" id="authenticate">Authenticate BIATCH!</button>
+  <button type="submit" id="listServices">List Services</button>
+</template>
+
+<template name="servicesList">
+  {{ #each services }}
+    {{ name }}_{{_id}}
+  {{ /each }}
+</template>
+
+<template name="newService">
+  <input type="text" id="serviceName" value="nico">
+  <input type="text" id="serviceURL" value="https://api.panda.com">
+  <button type="submit" id="createService">Create service</button>
+</template>
+
+<template name="pushMiddleware">
+  <button type="submit" id="submitMiddleware">Push Middleware</button>
+</template>

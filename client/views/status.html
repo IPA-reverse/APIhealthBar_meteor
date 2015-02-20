@@ -1,0 +1,8 @@
+<template name="statusTpl">
+    {{#with services}}
+    <div class="alert alert-{{status}}" role="alert" style="height:200px;width:200px;text-align: center;">
+        Service: {{name}}
+        <i class="fa fa-{{displayStatus status}}" style="font-size:200px;"></i>
+    </div>
+    {{/with}}
+</template>
